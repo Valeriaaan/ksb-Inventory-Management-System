@@ -28,7 +28,7 @@ Partial Class IngredientForm
         Me.IngredientClearButton = New System.Windows.Forms.Button()
         Me.IngredientIDLabel = New System.Windows.Forms.Label()
         Me.IngredientIDComboBox = New System.Windows.Forms.ComboBox()
-        Me.IngredientSupplierIDLabel = New System.Windows.Forms.Label()
+        Me.IngredientSupplierNameLabel = New System.Windows.Forms.Label()
         Me.IngredientExpDateLabel = New System.Windows.Forms.Label()
         Me.IngredientNameLabel = New System.Windows.Forms.Label()
         Me.IngredientAddButton = New System.Windows.Forms.Button()
@@ -36,7 +36,7 @@ Partial Class IngredientForm
         Me.IngredientUpdateButton = New System.Windows.Forms.Button()
         Me.IngredientDeleteButton = New System.Windows.Forms.Button()
         Me.IngredientDGV = New System.Windows.Forms.DataGridView()
-        Me.IngredientSupplierIDComboBox = New System.Windows.Forms.ComboBox()
+        Me.IngredientSupplierNameComboBox = New System.Windows.Forms.ComboBox()
         Me.IngredientExpDatePicker = New System.Windows.Forms.DateTimePicker()
         Me.IngredientQuantityLabel = New System.Windows.Forms.Label()
         Me.IngredientQuantityTextBox = New System.Windows.Forms.TextBox()
@@ -101,16 +101,16 @@ Partial Class IngredientForm
         Me.IngredientIDComboBox.Size = New System.Drawing.Size(254, 36)
         Me.IngredientIDComboBox.TabIndex = 24
         '
-        'IngredientSupplierIDLabel
+        'IngredientSupplierNameLabel
         '
-        Me.IngredientSupplierIDLabel.AutoSize = True
-        Me.IngredientSupplierIDLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(31, Byte), Integer))
-        Me.IngredientSupplierIDLabel.Location = New System.Drawing.Point(259, 242)
-        Me.IngredientSupplierIDLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.IngredientSupplierIDLabel.Name = "IngredientSupplierIDLabel"
-        Me.IngredientSupplierIDLabel.Size = New System.Drawing.Size(109, 28)
-        Me.IngredientSupplierIDLabel.TabIndex = 30
-        Me.IngredientSupplierIDLabel.Text = "Supplier ID"
+        Me.IngredientSupplierNameLabel.AutoSize = True
+        Me.IngredientSupplierNameLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.IngredientSupplierNameLabel.Location = New System.Drawing.Point(259, 242)
+        Me.IngredientSupplierNameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.IngredientSupplierNameLabel.Name = "IngredientSupplierNameLabel"
+        Me.IngredientSupplierNameLabel.Size = New System.Drawing.Size(142, 28)
+        Me.IngredientSupplierNameLabel.TabIndex = 30
+        Me.IngredientSupplierNameLabel.Text = "Supplier Name"
         '
         'IngredientExpDateLabel
         '
@@ -193,14 +193,14 @@ Partial Class IngredientForm
         Me.IngredientDGV.Size = New System.Drawing.Size(925, 492)
         Me.IngredientDGV.TabIndex = 38
         '
-        'IngredientSupplierIDComboBox
+        'IngredientSupplierNameComboBox
         '
-        Me.IngredientSupplierIDComboBox.FormattingEnabled = True
-        Me.IngredientSupplierIDComboBox.Location = New System.Drawing.Point(426, 234)
-        Me.IngredientSupplierIDComboBox.Margin = New System.Windows.Forms.Padding(4)
-        Me.IngredientSupplierIDComboBox.Name = "IngredientSupplierIDComboBox"
-        Me.IngredientSupplierIDComboBox.Size = New System.Drawing.Size(254, 36)
-        Me.IngredientSupplierIDComboBox.TabIndex = 40
+        Me.IngredientSupplierNameComboBox.FormattingEnabled = True
+        Me.IngredientSupplierNameComboBox.Location = New System.Drawing.Point(426, 234)
+        Me.IngredientSupplierNameComboBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.IngredientSupplierNameComboBox.Name = "IngredientSupplierNameComboBox"
+        Me.IngredientSupplierNameComboBox.Size = New System.Drawing.Size(254, 36)
+        Me.IngredientSupplierNameComboBox.TabIndex = 40
         '
         'IngredientExpDatePicker
         '
@@ -239,12 +239,12 @@ Partial Class IngredientForm
         Me.ClientSize = New System.Drawing.Size(951, 564)
         Me.ControlBox = False
         Me.Controls.Add(Me.IngredientExpDatePicker)
-        Me.Controls.Add(Me.IngredientSupplierIDComboBox)
+        Me.Controls.Add(Me.IngredientSupplierNameComboBox)
         Me.Controls.Add(Me.IngredientClearButton)
         Me.Controls.Add(Me.IngredientIDLabel)
         Me.Controls.Add(Me.IngredientIDComboBox)
         Me.Controls.Add(Me.IngredientQuantityTextBox)
-        Me.Controls.Add(Me.IngredientSupplierIDLabel)
+        Me.Controls.Add(Me.IngredientSupplierNameLabel)
         Me.Controls.Add(Me.IngredientQuantityLabel)
         Me.Controls.Add(Me.IngredientExpDateLabel)
         Me.Controls.Add(Me.IngredientNameLabel)
@@ -272,7 +272,7 @@ Partial Class IngredientForm
     Friend WithEvents IngredientClearButton As System.Windows.Forms.Button
     Friend WithEvents IngredientIDLabel As System.Windows.Forms.Label
     Friend WithEvents IngredientIDComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents IngredientSupplierIDLabel As System.Windows.Forms.Label
+    Friend WithEvents IngredientSupplierNameLabel As System.Windows.Forms.Label
     Friend WithEvents IngredientExpDateLabel As System.Windows.Forms.Label
     Friend WithEvents IngredientNameLabel As System.Windows.Forms.Label
     Friend WithEvents IngredientAddButton As System.Windows.Forms.Button
@@ -280,7 +280,7 @@ Partial Class IngredientForm
     Friend WithEvents IngredientUpdateButton As System.Windows.Forms.Button
     Friend WithEvents IngredientDeleteButton As System.Windows.Forms.Button
     Friend WithEvents IngredientDGV As System.Windows.Forms.DataGridView
-    Friend WithEvents IngredientSupplierIDComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents IngredientSupplierNameComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents IngredientExpDatePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents IngredientQuantityLabel As System.Windows.Forms.Label
     Friend WithEvents IngredientQuantityTextBox As System.Windows.Forms.TextBox

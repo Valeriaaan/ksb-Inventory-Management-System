@@ -3,13 +3,6 @@
     Private Sub RestockForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
     End Sub
 
-    Sub ClearTextboxes()
-        RestockEmployeeNameTextBox.Clear()
-        RestockIngredientNameTextBox.Clear()
-        RestockQuantityTextBox.Clear()
-        RestockCostTextBox.Clear()
-    End Sub
-
     Sub DisplayRestockIDs()
         Dim t1 As New DataTable
         Dim t2 As New DataTable
@@ -38,6 +31,14 @@
         End Try
     End Sub
 
+    Sub ClearTextboxes()
+        RestockEmployeeNameTextBox.Clear()
+        RestockIngredientNameTextBox.Clear()
+        RestockQuantityTextBox.Clear()
+        RestockCostTextBox.Clear()
+    End Sub
+
+    ' Restok Button Click Handlers
     Private Sub RestockAddStockButton_Click(sender As Object, e As EventArgs) Handles RestockAddStockButton.Click
         openCon()
         Try
@@ -62,7 +63,7 @@
         ClearTextboxes()
     End Sub
 
-    ' button exceptions 
+    ' Restock Component Conditions 
     Private Sub RestockCostTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles RestockCostTextBox.KeyPress
         ' Allow only digits, decimal separator, backspace and delete keys
         If (Not Char.IsDigit(e.KeyChar)) AndAlso (e.KeyChar <> ".") AndAlso (e.KeyChar <> ",") AndAlso (e.KeyChar <> ChrW(Keys.Back)) AndAlso (e.KeyChar <> ChrW(Keys.Delete)) Then
@@ -98,7 +99,6 @@
     Private Sub RestockCostTextBox_TextChanged(sender As Object, e As EventArgs) Handles RestockCostTextBox.TextChanged
         CheckAllTextBoxes(RestockAddStockButton, Me)
     End Sub
-
 
     Private Sub RestockIngredientIDComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles RestockIngredientIDComboBox.SelectedIndexChanged
         If RestockIngredientIDComboBox.SelectedIndex > -1 Then

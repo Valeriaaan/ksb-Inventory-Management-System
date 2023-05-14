@@ -44,7 +44,7 @@
         End Try
     End Sub
 
-    Sub DisplayIngredientSupplierID()
+    Sub DisplayIngredientSupplierName()
         Dim t2 As New DataTable
         openCon()
         Try
@@ -53,9 +53,9 @@
             adapter.SelectCommand = cmd
             adapter.Fill(t2)
 
-            IngredientSupplierIDComboBox.DataSource = t2
-            IngredientSupplierIDComboBox.DisplayMember = "s_id"
-            IngredientSupplierIDComboBox.ValueMember = "s_id"
+            IngredientSupplierNameComboBox.DataSource = t2
+            IngredientSupplierNameComboBox.DisplayMember = "s_id"
+            IngredientSupplierNameComboBox.ValueMember = "s_id"
             con.Close()
         Catch ex As Exception
 
@@ -92,7 +92,7 @@
         openCon()
         Try
             cmd.Connection = con
-            cmd.CommandText = "INSERT INTO ingredient (i_name,i_expiration_date,s_id) VALUES ('" & IngredientNameTextBox.Text & "','" & IngredientExpDatePicker.Text & "', '" & IngredientSupplierIDComboBox.Text & "')"
+            cmd.CommandText = "INSERT INTO ingredient (i_name,i_expiration_date,s_id) VALUES ('" & IngredientNameTextBox.Text & "','" & IngredientExpDatePicker.Text & "', '" & IngredientSupplierNameComboBox.Text & "')"
             If MsgBox("Do you want to save this record?", MsgBoxStyle.YesNo) = vbYes Then
                 cmd.ExecuteNonQuery()
                 MsgBox("New Record Added.")
@@ -105,14 +105,14 @@
 
         ClearTextboxes()
         DisplayIngredientID()
-        DisplayIngredientSupplierID()
+        DisplayIngredientSupplierName()
     End Sub
 
     Private Sub IngredientUpdateButton_Click(sender As Object, e As EventArgs) Handles IngredientUpdateButton.Click
         openCon()
         Try
             cmd.Connection = con
-            cmd.CommandText = "UPDATE ingredient SET i_name ='" & IngredientNameTextBox.Text & "', i_expiration_date = '" & IngredientExpDatePicker.Text & "', i_qty = '" & IngredientQuantityTextBox.Text & "',s_id = '" & IngredientSupplierIDComboBox.Text & "' WHERE i_id = '" & IngredientIDComboBox.Text & "'"
+            cmd.CommandText = "UPDATE ingredient SET i_name ='" & IngredientNameTextBox.Text & "', i_expiration_date = '" & IngredientExpDatePicker.Text & "', i_qty = '" & IngredientQuantityTextBox.Text & "',s_id = '" & IngredientSupplierNameComboBox.Text & "' WHERE i_id = '" & IngredientIDComboBox.Text & "'"
             If MsgBox("Are you sure you want to update this record?", MsgBoxStyle.YesNo) = vbYes Then
                 cmd.ExecuteNonQuery()
                 MsgBox("Record Has Been Updated.")
@@ -125,7 +125,7 @@
 
         ClearTextboxes()
         DisplayIngredientID()
-        DisplayIngredientSupplierID()
+        DisplayIngredientSupplierName()
     End Sub
 
     Private Sub IngredientDeleteButton_Click(sender As Object, e As EventArgs) Handles IngredientDeleteButton.Click
@@ -145,7 +145,7 @@
 
         ClearTextboxes()
         DisplayIngredientID()
-        DisplayIngredientSupplierID()
+        DisplayIngredientSupplierName()
     End Sub
 
     Private Sub IngredientClearButton_Click(sender As Object, e As EventArgs) Handles IngredientClearButton.Click
@@ -201,7 +201,7 @@
                     IngredientNameTextBox.Text = reader.GetString("i_name")
                     IngredientExpDatePicker.Text = reader.GetString("i_expiration_date")
                     IngredientQuantityTextBox.Text = reader.GetString("i_qty")
-                    IngredientSupplierIDComboBox.Text = reader.GetString("s_id")
+                    IngredientSupplierNameComboBox.Text = reader.GetString("s_id")
                 End If
                 reader.Close()
 

@@ -5,7 +5,7 @@ Public Class SupplierForm
         ShowSupplierTable()
     End Sub
 
-    ' Sub classes 
+    ' Sub Procedures 
     Sub ShowSupplierTable()
         Dim SupplierTable As New DataTable
         openCon()
@@ -78,7 +78,7 @@ Public Class SupplierForm
         End Try
     End Sub
 
-    ' Button clicks
+    ' Supplier Button Click Handlers
     Private Sub SupplierAddButton_Click(sender As Object, e As EventArgs) Handles SupplierAddButton.Click
         openCon()
         Try
@@ -140,7 +140,7 @@ Public Class SupplierForm
         ClearTextboxes()
     End Sub
 
-    ' Button exceptions
+    ' Supplier Component Conditions
     Private Sub SupplierNumberTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SupplierNumberTextBox.KeyPress
         If Not Char.IsDigit(e.KeyChar) AndAlso Not e.KeyChar = ChrW(Keys.Back) AndAlso Not e.KeyChar = ChrW(Keys.Delete) Then
             e.Handled = True ' Ignore the key press

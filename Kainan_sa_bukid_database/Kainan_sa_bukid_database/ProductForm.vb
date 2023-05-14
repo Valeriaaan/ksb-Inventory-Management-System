@@ -8,6 +8,7 @@
     Private Sub ProductForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DisplayIngredients()
         DisplayProductTable()
+        DisplayProductName()
     End Sub
 
     ' Sub classes 
@@ -52,6 +53,26 @@
 
             ProductIDComboBox.DisplayMember = "p_name"
             ProductIDComboBox.ValueMember = "p_id"
+
+            con.Close()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Sub DisplayProductName()
+        Dim t2 As New DataTable
+        openCon()
+        Try
+            cmd.Connection = con
+            cmd.CommandText = "SELECT * FROM product"
+            adapter.SelectCommand = cmd
+            adapter.Fill(t2)
+
+            ProductIngredientNameComboBox.DataSource = t2
+
+            ProductIngredientNameComboBox.DisplayMember = "p_name"
+            ProductIngredientNameComboBox.ValueMember = "p_id"
 
             con.Close()
         Catch ex As Exception
@@ -143,7 +164,6 @@
         DisplayProductID()
     End Sub
 
-
     Private Sub UpdateProductIngredientsButton_Click(sender As Object, e As EventArgs) Handles UpdateProductIngredientsButton.Click
         AddProductIngredientsPanel.Show()
         AddProductIngredientsPanel.BringToFront()
@@ -208,7 +228,6 @@
             End Try
         End If
     End Sub
-
 
     ' --------------------------------------------------ADDING INGREDIENTS--------------------------------------------'
     Sub DisplayIngredients()
@@ -301,7 +320,6 @@
                             Exit For
                         End If
                     End If
-
                 Next
 
                 If exist = False Then
@@ -324,7 +342,7 @@
             cmd.Connection = con
             If MsgBox("Do you want to add the following ingredients to this product?", MsgBoxStyle.YesNo) = vbYes Then
                 For j As Integer = 0 To ProductIngredientDGV.Rows.Count - 1 Step +1
-                    cmd.CommandText = "INSERT INTO contains (p_id, i_id, qty) VALUES ((SELECT p_id FROM product WHERE p_name = '" & ProductIngredientNameTextBox.Text & "'), '" & ProductIngredientDGV.Rows(j).Cells(1).Value & "','" & ProductIngredientDGV.Rows(j).Cells(3).Value & "')"
+                    cmd.CommandText = "INSERT INTO contains (p_id, i_id, qty) VALUES ((SELECT p_id FROM product WHERE p_name = '" & ProductIngredientNameComboBox.Text & "'), '" & ProductIngredientDGV.Rows(j).Cells(1).Value & "','" & ProductIngredientDGV.Rows(j).Cells(3).Value & "')"
                     cmd.ExecuteNonQuery()
                 Next
             End If

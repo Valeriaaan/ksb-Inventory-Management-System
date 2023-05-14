@@ -1,5 +1,9 @@
+C:\Users\Acer\onedrive\documents\visual studio 2013\Projects\Kainan_sa_bukid_database\Kainan_sa_bukid_database\obj\Debug\Kainan_sa_bukid_database.DashboardForm.resources
+C:\Users\Acer\onedrive\documents\visual studio 2013\Projects\Kainan_sa_bukid_database\Kainan_sa_bukid_database\obj\Debug\Kainan_sa_bukid_database.DeliveryForm.resources
 C:\Users\Acer\onedrive\documents\visual studio 2013\Projects\Kainan_sa_bukid_database\Kainan_sa_bukid_database\obj\Debug\Kainan_sa_bukid_database.EmployeeForm.resources
+C:\Users\Acer\onedrive\documents\visual studio 2013\Projects\Kainan_sa_bukid_database\Kainan_sa_bukid_database\obj\Debug\Kainan_sa_bukid_database.RestockForm.resources
 C:\Users\Acer\onedrive\documents\visual studio 2013\Projects\Kainan_sa_bukid_database\Kainan_sa_bukid_database\obj\Debug\Kainan_sa_bukid_database.MainForm.resources
+C:\Users\Acer\onedrive\documents\visual studio 2013\Projects\Kainan_sa_bukid_database\Kainan_sa_bukid_database\obj\Debug\Kainan_sa_bukid_database.SalesForm.resources
 C:\Users\Acer\onedrive\documents\visual studio 2013\Projects\Kainan_sa_bukid_database\Kainan_sa_bukid_database\obj\Debug\Kainan_sa_bukid_database.SupplierForm.resources
 C:\Users\Acer\onedrive\documents\visual studio 2013\Projects\Kainan_sa_bukid_database\Kainan_sa_bukid_database\obj\Debug\Kainan_sa_bukid_database.IngredientForm.resources
 C:\Users\Acer\onedrive\documents\visual studio 2013\Projects\Kainan_sa_bukid_database\Kainan_sa_bukid_database\obj\Debug\Kainan_sa_bukid_database.Resources.resources
@@ -14,7 +18,3 @@ C:\Users\Acer\onedrive\documents\visual studio 2013\Projects\Kainan_sa_bukid_dat
 C:\Users\Acer\onedrive\documents\visual studio 2013\Projects\Kainan_sa_bukid_database\Kainan_sa_bukid_database\obj\Debug\Kainan_sa_bukid_database.xml
 C:\Users\Acer\onedrive\documents\visual studio 2013\Projects\Kainan_sa_bukid_database\Kainan_sa_bukid_database\obj\Debug\Kainan_sa_bukid_database.pdb
 C:\Users\Acer\onedrive\documents\visual studio 2013\Projects\Kainan_sa_bukid_database\Kainan_sa_bukid_database\obj\Debug\Kainan_sa_bukid_database.vbprojResolveAssemblyReference.cache
-C:\Users\Acer\onedrive\documents\visual studio 2013\Projects\Kainan_sa_bukid_database\Kainan_sa_bukid_database\obj\Debug\Kainan_sa_bukid_database.SalesForm.resources
-C:\Users\Acer\onedrive\documents\visual studio 2013\Projects\Kainan_sa_bukid_database\Kainan_sa_bukid_database\obj\Debug\Kainan_sa_bukid_database.DeliveryForm.resources
-C:\Users\Acer\onedrive\documents\visual studio 2013\Projects\Kainan_sa_bukid_database\Kainan_sa_bukid_database\obj\Debug\Kainan_sa_bukid_database.RestockForm.resources
-C:\Users\Acer\onedrive\documents\visual studio 2013\Projects\Kainan_sa_bukid_database\Kainan_sa_bukid_database\obj\Debug\Kainan_sa_bukid_database.DashboardForm.resources

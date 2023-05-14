@@ -295,8 +295,8 @@
             .IngredientExpDatePicker.Visible = False
             .IngredientQuantityLabel.Visible = False
             .IngredientQuantityTextBox.Visible = False
-            .IngredientSupplierIDLabel.Visible = False
-            .IngredientSupplierIDComboBox.Visible = False
+            .IngredientSupplierNameLabel.Visible = False
+            .IngredientSupplierNameComboBox.Visible = False
 
             .IngredientAddButton.Visible = False
             .IngredientUpdateButton.Visible = False
@@ -325,8 +325,8 @@
             .IngredientExpDatePicker.Visible = True
             .IngredientQuantityLabel.Visible = False
             .IngredientQuantityTextBox.Visible = False
-            .IngredientSupplierIDLabel.Visible = True
-            .IngredientSupplierIDComboBox.Visible = True
+            .IngredientSupplierNameLabel.Visible = True
+            .IngredientSupplierNameComboBox.Visible = True
 
             .IngredientAddButton.Visible = True
             .IngredientUpdateButton.Visible = False
@@ -339,15 +339,15 @@
             .IngredientNameTextBox.Enabled = True
             .IngredientExpDatePicker.Enabled = True
             .IngredientQuantityTextBox.Enabled = False
-            .IngredientSupplierIDComboBox.Enabled = True
+            .IngredientSupplierNameComboBox.Enabled = True
 
             .IngredientIDComboBox.DataSource = Nothing
             .IngredientIDComboBox.Items.Clear()
 
-            .IngredientSupplierIDComboBox.DataSource = Nothing
-            .IngredientSupplierIDComboBox.Items.Clear()
+            .IngredientSupplierNameComboBox.DataSource = Nothing
+            .IngredientSupplierNameComboBox.Items.Clear()
 
-            .DisplayIngredientSupplierID()
+            .DisplayIngredientSupplierName()
             .DisplayNextIngredientID()
             .ClearTextboxes()
             .BringToFront()
@@ -370,8 +370,8 @@
             .IngredientExpDatePicker.Visible = True
             .IngredientQuantityLabel.Visible = True
             .IngredientQuantityTextBox.Visible = True
-            .IngredientSupplierIDLabel.Visible = True
-            .IngredientSupplierIDComboBox.Visible = True
+            .IngredientSupplierNameLabel.Visible = True
+            .IngredientSupplierNameComboBox.Visible = True
 
             .IngredientAddButton.Visible = False
             .IngredientUpdateButton.Visible = True
@@ -384,9 +384,9 @@
             .IngredientNameTextBox.Enabled = True
             .IngredientExpDatePicker.Enabled = True
             .IngredientQuantityTextBox.Enabled = True
-            .IngredientSupplierIDComboBox.Enabled = True
+            .IngredientSupplierNameComboBox.Enabled = True
 
-            .DisplayIngredientSupplierID()
+            .DisplayIngredientSupplierName()
             .DisplayIngredientID()
             .ClearTextboxes()
             .BringToFront()
@@ -409,8 +409,8 @@
             .IngredientExpDatePicker.Visible = True
             .IngredientQuantityLabel.Visible = False
             .IngredientQuantityTextBox.Visible = False
-            .IngredientSupplierIDLabel.Visible = True
-            .IngredientSupplierIDComboBox.Visible = True
+            .IngredientSupplierNameLabel.Visible = True
+            .IngredientSupplierNameComboBox.Visible = True
 
             .IngredientAddButton.Visible = False
             .IngredientUpdateButton.Visible = False
@@ -423,9 +423,9 @@
             .IngredientNameTextBox.Enabled = False
             .IngredientExpDatePicker.Enabled = False
             .IngredientQuantityTextBox.Enabled = False
-            .IngredientSupplierIDComboBox.Enabled = False
+            .IngredientSupplierNameComboBox.Enabled = False
 
-            .DisplayIngredientSupplierID()
+            .DisplayIngredientSupplierName()
             .DisplayIngredientID()
             .ClearTextboxes()
             .BringToFront()

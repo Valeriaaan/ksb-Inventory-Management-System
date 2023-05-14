@@ -22,7 +22,7 @@ Partial Class ProductForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.ProductTitleLabel = New System.Windows.Forms.Label()
         Me.ProductClearButton = New System.Windows.Forms.Button()
@@ -38,7 +38,6 @@ Partial Class ProductForm
         Me.ProductUpdateButton = New System.Windows.Forms.Button()
         Me.ProductDeleteButton = New System.Windows.Forms.Button()
         Me.ProductDGV = New System.Windows.Forms.DataGridView()
-        Me.ProductIngredientNameTextBox = New System.Windows.Forms.TextBox()
         Me.ProductIngredientNameLabel = New System.Windows.Forms.Label()
         Me.ProductIngredientFLP = New System.Windows.Forms.FlowLayoutPanel()
         Me.ProductIngredientDGV = New System.Windows.Forms.DataGridView()
@@ -49,6 +48,7 @@ Partial Class ProductForm
         Me.AddProductIngredientButton = New System.Windows.Forms.Button()
         Me.SalesClearButton = New System.Windows.Forms.Button()
         Me.AddProductIngredientsPanel = New System.Windows.Forms.Panel()
+        Me.ProductIngredientNameComboBox = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.UpdateProductIngredientsButton = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
@@ -215,19 +215,11 @@ Partial Class ProductForm
         Me.ProductDGV.ReadOnly = True
         Me.ProductDGV.RowHeadersWidth = 21
         Me.ProductDGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ProductDGV.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ProductDGV.RowsDefaultCellStyle = DataGridViewCellStyle1
         Me.ProductDGV.RowTemplate.Height = 24
         Me.ProductDGV.Size = New System.Drawing.Size(925, 492)
         Me.ProductDGV.TabIndex = 39
-        '
-        'ProductIngredientNameTextBox
-        '
-        Me.ProductIngredientNameTextBox.Location = New System.Drawing.Point(174, 21)
-        Me.ProductIngredientNameTextBox.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.ProductIngredientNameTextBox.Name = "ProductIngredientNameTextBox"
-        Me.ProductIngredientNameTextBox.Size = New System.Drawing.Size(254, 34)
-        Me.ProductIngredientNameTextBox.TabIndex = 81
         '
         'ProductIngredientNameLabel
         '
@@ -311,18 +303,26 @@ Partial Class ProductForm
         '
         'AddProductIngredientsPanel
         '
+        Me.AddProductIngredientsPanel.Controls.Add(Me.ProductIngredientNameComboBox)
         Me.AddProductIngredientsPanel.Controls.Add(Me.Label1)
         Me.AddProductIngredientsPanel.Controls.Add(Me.SalesClearButton)
         Me.AddProductIngredientsPanel.Controls.Add(Me.AddProductIngredientButton)
         Me.AddProductIngredientsPanel.Controls.Add(Me.ProductIngredientDGV)
         Me.AddProductIngredientsPanel.Controls.Add(Me.ProductIngredientFLP)
         Me.AddProductIngredientsPanel.Controls.Add(Me.ProductIngredientNameLabel)
-        Me.AddProductIngredientsPanel.Controls.Add(Me.ProductIngredientNameTextBox)
         Me.AddProductIngredientsPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AddProductIngredientsPanel.Location = New System.Drawing.Point(0, 51)
         Me.AddProductIngredientsPanel.Name = "AddProductIngredientsPanel"
         Me.AddProductIngredientsPanel.Size = New System.Drawing.Size(951, 513)
         Me.AddProductIngredientsPanel.TabIndex = 41
+        '
+        'ProductIngredientNameComboBox
+        '
+        Me.ProductIngredientNameComboBox.FormattingEnabled = True
+        Me.ProductIngredientNameComboBox.Location = New System.Drawing.Point(174, 19)
+        Me.ProductIngredientNameComboBox.Name = "ProductIngredientNameComboBox"
+        Me.ProductIngredientNameComboBox.Size = New System.Drawing.Size(254, 36)
+        Me.ProductIngredientNameComboBox.TabIndex = 91
         '
         'Label1
         '
@@ -397,7 +397,6 @@ Partial Class ProductForm
     Friend WithEvents ProductUpdateButton As System.Windows.Forms.Button
     Friend WithEvents ProductDeleteButton As System.Windows.Forms.Button
     Friend WithEvents ProductDGV As System.Windows.Forms.DataGridView
-    Friend WithEvents ProductIngredientNameTextBox As System.Windows.Forms.TextBox
     Friend WithEvents ProductIngredientNameLabel As System.Windows.Forms.Label
     Friend WithEvents ProductIngredientFLP As System.Windows.Forms.FlowLayoutPanel
     Friend WithEvents ProductIngredientDGV As System.Windows.Forms.DataGridView
@@ -410,4 +409,5 @@ Partial Class ProductForm
     Friend WithEvents IngredientName1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Quantity As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents UpdateProductIngredientsButton As System.Windows.Forms.Button
+    Friend WithEvents ProductIngredientNameComboBox As System.Windows.Forms.ComboBox
 End Class
